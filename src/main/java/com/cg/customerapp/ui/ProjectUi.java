@@ -14,13 +14,18 @@ public class ProjectUi {
 
 	public void run()
 	{
-		Customer customer = add(1L, "K");
-		Customer customer1 = add(2L, "S");
+		Customer customer = add(1L, "Kevin");
+		Customer customer1 = add(2L, "Smith");
+		Customer customer2= add(3L, "John");
 		Long id1 = customer.getId();
 		System.out.println("Before update: "+customer.toString());
-		customer = update(id1, "P");
+		customer = update(id1, "Peter");
 		System.out.println("After update: "+customer.toString());
-		System.out.println(customer1.toString());
+		System.out.println("Before update: "+customer1.toString());
+		Long id2 = customer1.getId();
+		customer1 = update(id2, "Sam");
+		System.out.println("After update: "+customer1.toString());
+		System.out.println(customer2.toString());
 	}
 	
 	public Customer add(Long id, String name)
